@@ -5,6 +5,7 @@ import AppHeader from "./components/common/header/AppHeader";
 import Footer from "./components/common/footer/Footer";
 import About from "./components/layouts/about/About";
 import Welcome from "./components/welcome/Welcome";
+import Contact from "./components/layouts/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/main" element={<Welcome />}></Route>
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
+          <Route exact path="/contact" element={<Contact />}></Route>
         </Routes>
         <Footer />
       </div>

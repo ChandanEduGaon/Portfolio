@@ -30,6 +30,14 @@ const AppHeader = () => {
         >
           Hire me
         </Link>
+        <Link
+          to={"/contact"}
+          className={`hover:text-orange-400 ${
+            location.pathname === "/contact" ? "active" : ""
+          }`}
+        >
+          Contact
+        </Link>
       </div>
     </div>
   );

@@ -58,8 +58,7 @@ const About = () => {
       sub_title: "Easy UI/UX design.",
       icon: "bootstrap",
       iconColor: "lightblue",
-      bgColor: "#891555",
-    }
+      bgColor: "#891555",    }
   ]
   return (
     <div className="w-screen h-[80%] flex justify-center items-center overflow-auto flex-wrap">
