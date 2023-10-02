@@ -12,7 +12,7 @@ function App() {
       <div className="w-screen h-screen" id="bg">
         <AppHeader />
         <Routes>
-          <Route exact path="/" element={<Welcome />}></Route>
+          <Route exact path="/main" element={<Welcome />}></Route>
           <Route exact path="/home" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
         </Routes>
