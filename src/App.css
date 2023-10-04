@@ -1,23 +1,74 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
-body{
+
+body {
   height: 100vh;
-  background-image: url("../src/assets/gardient-1.jpg"); 
-   width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: color-burn;
+  width: 100vw;
 }
-.active{
-  color: white;
+
+.anchor {
+  transition: .2s;
 }
-.card{
+
+.anchor:hover {
+  font-size: 18px;
+}
+
+.active {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card {
   transition: .5s;
 }
-.card:hover{
+
+.card:hover {
   transform: scale(1.01);
-  box-shadow: 2px 2px 50px rgb(177, 177, 177);
+}
+
+.hero {
+  background-color: black;
+}
+
+
+@keyframes move-right {
+  from {
+    transform: translateX(150px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes move-left {
+  from {
+    transform: translateX(-150px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes move-top {
+  from {
+    transform: translateY(60px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes move-bottom {
+  from {
+    transform: translateY(-150px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }

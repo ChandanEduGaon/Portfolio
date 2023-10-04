@@ -7,7 +7,8 @@ const Typer = (props) => {
       sequence={props.sequence}
       wrapper="span"
       speed={50}
-      style={{ display: "inline-block", color: props.textColor }}
+      style={{ display: "inline-block" }}
+      className={`text-${props.textColor}-600`}
       repeat={Infinity}
     />
   );

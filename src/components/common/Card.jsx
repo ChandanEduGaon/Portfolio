@@ -4,17 +4,23 @@ import "boxicons";
 const Card = (props) => {
   return (
     <div
-      className="w-[90%] h-[35%] rounded p-5 flex flex-col justify-center items-start m-5 md:w-[45%] md:h-[35%] sm:w-[45%] sm:h-[35%] lg:w-[35%] lg:h-[40%] hover:cursor-pointer card"
+      className="w-[90%] h-[15%] rounded-full p-5 flex justify-start items-center mx-5 my-2 md:w-[35%] md:h-[15%] sm:w-[45%] sm:h-[15%] lg:w-[25%] lg:h-[15%] hover:cursor-pointer card shadow"
       style={{ backgroundColor: props.bgColor }}
     >
-      <box-icon
-        type={props.iconType ? props.iconType : "logo"}
-        color={props.iconColor}
-        size="50px"
-        name={props.icon}
-      ></box-icon>
-      <h1 className="text-2xl md:text-4xl text-white font-bold my-3">{props.title}</h1>
-      <p className="text-white">{props.sub_title}</p>
+      <span className="mx-2">
+        <box-icon
+          type={props.iconType ? props.iconType : "logo"}
+          color={props.iconColor}
+          size="50px"
+          name={props.icon}
+        ></box-icon>
+      </span>
+      <div className="details">
+        <h1 className="text-md md:text-xl text-white font-bold">
+          {props.title}
+        </h1>
+        <p className="text-white text-sm">{props.sub_title}</p>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "../../common/Card";
+import Card from "../common/Card";
+import Hero from "../common/Hero";
 
 const About = () => {
   const tech = [
@@ -57,22 +58,34 @@ const About = () => {
       title: "Bootstrap",
       sub_title: "Easy UI/UX design.",
       icon: "bootstrap",
+      iconColor: "purple",
+      bgColor: "#1555",
+    },
+    {
+      title: "Tailwind CSS",
+      sub_title: "Easy UI/UX design.",
+      icon: "tailwind-css",
       iconColor: "lightblue",
-      bgColor: "#891555",    }
-  ]
+      bgColor: "#895555",
+    },
+  ];
+  
   return (
-    <div className="w-screen h-[80%] flex justify-center items-center overflow-auto flex-wrap">
-      {tech.map((item, index) => (
-        <Card
-          key={index}
-          title={item.title}
-          iconType={item.iconType}
-          sub_title={item.sub_title}
-          icon={item.icon}
-          iconColor={item.iconColor}
-          bgColor={item.bgColor}
-        />
-      ))}
+    <div className="about w-screen h-[80%] overflow-auto">
+      <Hero />
+      <div className="w-screen h-[100%] flex justify-center items-center flex-wrap mt-10">
+        {tech.map((item, index) => (
+          <Card
+            key={index}
+            title={item.title}
+            iconType={item.iconType}
+            sub_title={item.sub_title}
+            icon={item.icon}
+            iconColor={item.iconColor}
+            bgColor={item.bgColor}
+          />
+        ))}
+      </div>
     </div>
   );
 };
