@@ -53,13 +53,13 @@ const Projects = () => {
             />
           }
           <span
-            className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute left-2 md:left-20 cursor-pointer top-48"
+            className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute left-2 md:left-20 cursor-pointer top-48 active:bg-purple-600 hover:bg-purple-400"
             onClick={() => updateProject_no(project_no + 1)}
           >
             <box-icon name="left-arrow-alt" color="#ffffff"></box-icon>
           </span>
           <span
-            className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute right-2 md:right-20 cursor-pointer top-48"
+            className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute right-2 md:right-20 cursor-pointer top-48 active:bg-purple-600 hover:bg-purple-400"
             onClick={() => updateProject_no(project_no + 1)}
           >
             <box-icon name="right-arrow-alt" color="#ffffff"></box-icon>

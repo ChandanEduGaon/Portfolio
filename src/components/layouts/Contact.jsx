@@ -26,7 +26,7 @@ const Contact = () => {
       <Hero />
       <div className="w-[100%] h-[80%] flex sm:justify-center items-center">
         <div className="flex flex-col p-5 w-[100%] sm:w-[60%]">
-          <span className="border border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
+          <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
             <label htmlFor="name" className="text-sm mb-2">
               Name
             </label>
@@ -37,7 +37,7 @@ const Contact = () => {
               placeholder="Enter you name..."
             />
           </span>
-          <span className="border border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
+          <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
             <label htmlFor="email" className="text-sm mb-2">
               Email
             </label>
@@ -48,7 +48,7 @@ const Contact = () => {
               placeholder="Enter you email..."
             />
           </span>
-          <span className="border border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
+          <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
             <label htmlFor="message" className="text-sm mb-2">
               Message
             </label>
