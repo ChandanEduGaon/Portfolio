@@ -21,7 +21,7 @@ const Hero = () => {
     },
   };
   return (
-    <div className="hero w-100 sm:h-[45%] md:h-[50%] lg:h-[60%] h-[35%] relative">
+    <div className="hero w-100 sm:h-[45%] md:h-[50%] lg:h-[60%] h-[35%] relative overflow-hidden">
       <div className="w-[100%] h-[100%] absolute sm:flex justify-center items-center flex flex-row">
         <div className="w-[60%] flex flex-col sm:p-10 p-5">
           <span className="text-white md:text-4xl lg:text-6xl font-bold text-xl">
@@ -33,9 +33,8 @@ const Hero = () => {
               </span>
             </span>
           </span>
-            <span className="text-white font-thin text-[10px] sm:text-sm" style={animationStyles.animTop}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Excepturi, sint!
+            <span className="text-white font-thin text-[10px] sm:text-sm pt-2 tracking-wider" style={animationStyles.animTop}>
+              I am a full stack web developer with 1.5 years of experience.
             </span>
         </div>
 

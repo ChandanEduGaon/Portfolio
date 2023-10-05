@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Hero from "./Hero";
 
 const AppHeader = () => {
+  const animationStyles = {
+    flash: {
+      animation: "flash ease-in-out 1s",
+    }
+  };
   const [menu, setMenu] = useState(false);
   const location = useLocation();
   return (
-    <div className="w-screen h-[10%] flex md:justify-center justify-between items-center bg-black">
+    <div className="w-screen h-[10%] flex md:justify-center justify-between items-center bg-black relative">
+      <div className="progress absolute w-screen h-[.9px] top-0">
+        <div className="w-[0%] h-[100%] bg-purple-600" style={animationStyles.flash}></div>
+      </div>
       <span className="sm:hidden flex w-[100%] justify-between items-center px-5 sm:p-10">
         <div className="flex items-baseline text-white">
           <span className="font-bold text-4xl me-1">Chandan</span>
