@@ -27,8 +27,8 @@ const Hero = () => {
           <span className="text-white md:text-4xl lg:text-6xl font-bold text-xl">
             <span>Hii there!</span>{" "}
             <span>
-              <span className="block">I can build your awesome</span>{" "}
-              <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              <span className="block text-sm sm:text-4xl">I can build your awesome</span>{" "}
+              <span className="font-extrabold text-2xl sm:text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 <Typer sequence={sequence} textColor="" />
               </span>
             </span>
