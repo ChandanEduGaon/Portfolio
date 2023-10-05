@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../common/Card";
 import Hero from "../common/Hero";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About";
+  }, [])
   const tech = [
     {
       title: "PHP",

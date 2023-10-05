@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../common/Hero";
 import Service from "../common/Service";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
   const [service_no, setService_no] = useState(0);
   const updateService_no = (newValue) => {
     if (newValue < services.length) {

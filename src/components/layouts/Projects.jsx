@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../common/Hero";
 import Project from "../common/Project";
 
 const Projects = () => {
+  useEffect(() => {
+    document.title = "Projects";
+  }, []);
   const [project_no, setProject_no] = useState(0);
   const updateProject_no = (newValue) => {
     if (newValue < projects.length) {

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../common/Hero";
 import Swal from "sweetalert2";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
