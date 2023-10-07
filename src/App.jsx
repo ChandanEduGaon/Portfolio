@@ -7,11 +7,15 @@ import About from "./components/layouts/About";
 import Contact from "./components/layouts/Contact";
 import Projects from "./components/layouts/Projects";
 import Preview from "./components/layouts/Preview";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <Router>
-      <div className="main w-screen h-screen max-w-screen overflow-auto" id="bg">
+      <div
+        className="main w-screen h-screen max-w-screen overflow-auto"
+        id="bg"
+      >
         <AppHeader />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
@@ -22,6 +26,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
