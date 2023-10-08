@@ -45,6 +45,7 @@ const Hero = () => {
         </div>
 
         <div className="w-[40%] p-5 flex justify-center items-center">
+          {/* logo */}
           <img
             src={Logo}
             alt="logo"
