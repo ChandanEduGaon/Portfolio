@@ -1,5 +1,6 @@
 import React from "react";
 import Typer from "../Typer";
+import Logo from '../../assets/profile.jpeg';
 
 const Hero = () => {
   const sequence = [
@@ -27,7 +28,9 @@ const Hero = () => {
           <span className="text-white md:text-4xl lg:text-6xl font-bold text-xl">
             <span>Hii there!</span>{" "}
             <span>
-              <span className="block text-sm sm:text-4xl">I can build your awesome</span>{" "}
+              <span className="block text-sm sm:text-4xl">
+                I can build your awesome
+              </span>{" "}
               <span className="font-extrabold text-2xl sm:text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 <Typer sequence={sequence} textColor="" />
               </span>
@@ -43,7 +46,7 @@ const Hero = () => {
 
         <div className="w-[40%] p-5 flex justify-center items-center">
           <img
-            src="https://media.licdn.com/dms/image/D4E03AQG3H-n3MTfl3Q/profile-displayphoto-shrink_400_400/0/1687165056159?e=1701302400&v=beta&t=GFfwX45C9mzYDdJ3SKO77yKEJh1uJ65jtvKM0-_cxK4"
+            src={Logo}
             alt="logo"
             style={animationStyles.animRight}
             className="w-[100%] md:w-[55%] border-4 border-white border-b-purple-600 rounded-full"
