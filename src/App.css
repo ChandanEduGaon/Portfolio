@@ -24,12 +24,12 @@ body {
 }
 
 .card {
-  transition: .5s;
+  transition: 1s;
+}
+.vintage{
+  background-image: linear-gradient(to right, rgb(200, 200, 200), rgb(244, 244, 244), rgb(200, 200, 200));
 }
 
-.card:hover {
-  transform: scale(1.01);
-}
 
 .hero {
   background-color: black;
@@ -82,4 +82,50 @@ body {
   to {
     transform: translateY(0px);
   }
+}
+.stick{
+  transition: 2s;
+}
+.stick:hover{
+  transform: translateY(200px);
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  width: 70%;
+  margin: 3rem auto 0 auto;
+}
+
+.header {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+input {
+  padding: 10px 3px;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 10px 1rem;
+  background: #334;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-content {
+  margin-top: 2rem;
 }
