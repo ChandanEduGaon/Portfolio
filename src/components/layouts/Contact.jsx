@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Hero from "../common/Hero";
 import Swal from "sweetalert2";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   useEffect(() => {
     document.title = "Contact";
   }, []);
@@ -18,12 +23,26 @@ const Contact = () => {
     },
   });
 
-  const fire = () => {
+  const fire = (status, msg) => {
     Toast.fire({
-      icon: "success",
-      title: "Message sent in successfully",
+      icon: status === 200 ? "success" : "warning",
+      title: msg === 'ok' ? "Message sent in successfully" : "Message not sent in successfully"
     });
-  }
+  };
+  const addContacts = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "contacts"), {
+        name: name,
+        email: email,
+        message: message
+      });
+      console.log("Document written with ID: ", docRef.id);
+      fire(200, 'ok')
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      fire(500, "notOk");
+    }
+  };
   return (
     <div className="w-screen h-[80%] overflow-auto">
       <Hero />
@@ -37,7 +56,11 @@ const Contact = () => {
               id="name"
               className="border-none outline-none font-thin text-sm"
               type="text"
-              placeholder="Enter you name..."
+              placeholder="Enter your name..."
+              onChange={(e) => {
+                const name = e.target.value; // Get the input value
+                setName(name); // Call the setName function with the input value
+              }}
             />
           </span>
           <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
@@ -49,6 +72,10 @@ const Contact = () => {
               className="border-none outline-none font-thin text-sm"
               type="email"
               placeholder="Enter you email..."
+              onChange={(e) => {
+                const email = e.target.value; // Get the input value
+                setEmail(email); // Call the setName function with the input value
+              }}
             />
           </span>
           <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
@@ -59,12 +86,16 @@ const Contact = () => {
               id="message"
               className="border-none outline-none font-thin text-sm resize-y"
               placeholder="Enter you message..."
+              onChange={(e) => {
+                const msg = e.target.value; // Get the input value
+                setMessage(msg); // Call the setName function with the input value
+              }}
             />
           </span>
           <button
             type="submit"
             className="bg-purple-500 w-[100%] rounded py-2 text-white my-5"
-            onClick={fire}
+            onClick={addContacts}
           >
             Send
           </button>

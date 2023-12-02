@@ -1,6 +1,6 @@
 import React from "react";
 import Typer from "../Typer";
-import Logo from '../../assets/profile.jpeg';
+import Logo from "../../assets/profile.jpeg";
 
 const Hero = () => {
   const sequence = [
@@ -10,7 +10,7 @@ const Hero = () => {
     2000,
     "Blog App.",
     2000,
-    "Permotion App.",
+    "Promo App.",
     2000,
   ];
   const animationStyles = {
@@ -40,7 +40,7 @@ const Hero = () => {
             className="text-white font-thin text-[10px] sm:text-sm pt-2 tracking-wider"
             style={animationStyles.animTop}
           >
-            I am a full stack web developer with 1.5 years of experience.
+            I am a full stack web developer with 1.4 years of experience.
           </span>
         </div>
 

@@ -1,73 +1,196 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../common/Hero";
 import Service from "../common/Service";
+import About from "./About";
+import Exprience from "../common/Exprience";
+import Card from "../common/Card";
 
 const Home = () => {
   useEffect(() => {
     document.title = "Home";
   }, []);
-  const [service_no, setService_no] = useState(0);
-  const updateService_no = (newValue) => {
-    if (newValue < services.length) {
-      setService_no(newValue);
-    } else {
-      setService_no(0);
-    }
-  };
-  const services = [
+  const exp = [
     {
-      align: "1",
-      image:
-        "https://img.freepik.com/premium-photo/3d-render-store-with-blue-awning-that-says-store-it_484798-8.jpg?w=360",
-      title: "Shoping Web Application.",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+      c_color_1: "rgb(59, 130, 246)",
+      c_color_2: "#000",
+      first_name: "Build",
+      last_name: "Formula",
+      designation: "Laravel Developer",
+      s_d: "2023-10-16",
+      e_d: "Present",
+      location: "Ahmedabad, Gujarat, India",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
     },
     {
-      align: "0",
-      image:
-        "https://media.istockphoto.com/id/1252684502/photo/professional-blogger-working-on-his-new-post-for-social-media-at-home-closeup-creative.jpg?s=612x612&w=0&k=20&c=VR7V3Hn1HKjMQdykk2zjQ-2Xjsiw3tewZFZMp6swpog=",
-      title: "Blog Web Application.",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+      c_color_1: "#000",
+      c_color_2: "#000",
+      first_name: "Stakkdev",
+      last_name: "",
+      designation: "PHP Developer",
+      s_d: "2023-07-17",
+      e_d: "2023-10-01",
+      location: "Chandigarh, Punjab, India",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
     },
     {
-      align: "1",
-      image:
-        "https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/400/1.5x/cbbc/8-top-tips-for-back-to-school.jpg",
-      title: "School Web Application.",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus amet consectetur adipisicing elit. Repellendus, sit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus",
+      c_color_1: "rgb(249 115 22)",
+      c_color_2: "#000",
+      first_name: "Edugaon",
+      last_name: "",
+      designation: "PHP Developer",
+      s_d: "2022-7-09",
+      e_d: "2023-7-01",
+      location: "Chapra, Bihar, India",
+      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
     },
   ];
-  const service = services[service_no];
+  const tech = [
+    {
+      title: "CRM",
+      sub_title: "Get connected with your customers.",
+      icon: "user-voice",
+      iconType: "solid",
+      iconColor: "orange",
+      bgColor: "purple",
+    },
+    {
+      title: "ERP",
+      sub_title: "Mannage your all resources.",
+      icon: "cube-alt",
+      iconType: "solid",
+      iconColor: "red",
+      bgColor: "pink",
+    },
+    {
+      title: "API",
+      sub_title: "Mannage your all software with one Server.",
+      icon: "cube-alt",
+      iconType: "solid",
+      iconColor: "purple",
+      bgColor: "pink",
+    },
+  ];
+  const skill = [
+    {
+      title: "PHP",
+      sub_title: "1.5 years of experience.",
+      icon: "php",
+      iconColor: "blue",
+      bgColor: "purple",
+    },
+    {
+      title: "Laravel",
+      sub_title: "Scalable web application development.",
+      icon: "php",
+      iconColor: "red",
+      bgColor: "pink",
+    },
+    {
+      title: "Codeigniter",
+      sub_title: "Web application development.",
+      icon: "php",
+      iconColor: "red",
+      bgColor: "gray",
+    },
+    {
+      title: "Javascript",
+      sub_title: "Extended Web application development.",
+      icon: "nodejs",
+      iconColor: "lightblue",
+      bgColor: "black",
+    },
+    {
+      title: "jQuery",
+      sub_title: "UI/UX development.",
+      icon: "jquery",
+      iconColor: "blue",
+      bgColor: "skyblue",
+    },
+    {
+      title: "MySql",
+      sub_title: "Database management.",
+      icon: "data",
+      iconColor: "orange",
+      iconType: "solid",
+      bgColor: "#e87978",
+    },
+    {
+      title: "React",
+      sub_title: "No reload anymore.",
+      icon: "react",
+      iconColor: "black",
+      bgColor: "#e46928",
+    },
+    {
+      title: "Bootstrap",
+      sub_title: "Easy UI/UX design.",
+      icon: "bootstrap",
+      iconColor: "purple",
+      bgColor: "#1555",
+    },
+    {
+      title: "Tailwind",
+      sub_title: "Easy UI/UX design.",
+      icon: "tailwind-css",
+      iconColor: "lightblue",
+      bgColor: "#895555",
+    },
+  ];
   return (
-    <div className="w-screen h-[80%] overflow-auto">
+    <div className="w-screen h-[80%] overflow-auto ">
       <Hero />
-      <div className="w-[100%] h-[20%] flex flex-col justify-center items-center">
-        <span className="text-2xl font-bold">Services</span>
+      <div className="w-[100%] h-[15%] flex flex-col justify-center items-center">
+        <span className="text-sm font-thin border-b border-dashed">
+          Exprience
+        </span>
       </div>
-      <div className="w-[100%] flex justify-center items-center flex-wrap relative mb-20">
-        {
-          <Service
-            key={service_no}
-            title={service.title}
-            image={service.image}
-            description={service.description}
+      <div className="w-[100%] flex justify-center items-center flex-wrap relative ">
+        {exp.map((item, index) => (
+          <Exprience
+            key={index}
+            c_color_1={item.c_color_1}
+            c_color_2={item.c_color_2}
+            first_name={item.first_name}
+            last_name={item.last_name}
+            degignation={item.degignation}
+            s_d={item.s_d}
+            e_d={item.e_d}
+            location={item.location}
+            des={item.des}
           />
-        }
-        <span
-          className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute left-2 md:left-20 cursor-pointer top-48 active:bg-purple-600 hover:bg-purple-400"
-          onClick={() => updateService_no(service_no + 1)}
-        >
-          <box-icon name="left-arrow-alt" color="#ffffff"></box-icon>
-        </span>
-        <span
-          className="w-10 h-10 rounded-full bg-slate-400 bg-opacity-25 flex justify-center items-center absolute right-2 md:right-20 cursor-pointer top-48 active:bg-purple-600 hover:bg-purple-400"
-          onClick={() => updateService_no(service_no + 1)}
-        >
-          <box-icon name="right-arrow-alt" color="#ffffff"></box-icon>
-        </span>
+        ))}
+      </div>
+      <div className="w-[100%] h-[15%] flex flex-col justify-center items-center">
+        <span className="text-sm font-thin border-b border-dashed">Tech</span>
+      </div>
+      <div className="w-[100%] flex justify-center items-center flex-wrap relative ">
+        {tech.map((item, index) => (
+          <Card
+            key={index}
+            title={item.title}
+            iconType={item.iconType}
+            sub_title={item.sub_title}
+            icon={item.icon}
+            iconColor={item.iconColor}
+            bgColor={item.bgColor}
+          />
+        ))}
+      </div>
+      <div className="w-[100%] h-[15%] flex flex-col justify-center items-center">
+        <span className="text-sm font-thin border-b border-dashed">Languages & Skills</span>
+      </div>
+      <div className="w-[100%] flex justify-center items-center flex-wrap relative ">
+        {skill.map((item, index) => (
+          <Card
+            key={index}
+            title={item.title}
+            iconType={item.iconType}
+            sub_title={item.sub_title}
+            icon={item.icon}
+            iconColor={item.iconColor}
+            bgColor={item.bgColor}
+          />
+        ))}
       </div>
     </div>
   );
