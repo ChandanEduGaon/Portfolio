@@ -19,7 +19,7 @@ const Home = () => {
       s_d: "2023-10-16",
       e_d: "Present",
       location: "Ahmedabad, Gujarat, India",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
+      des: "Here i am a Laravel Developer. I works on CRM, ERP software. I also works on API development. It`s my favourite company, peoples are so good.",
     },
     {
       c_color_1: "#000",
@@ -30,7 +30,7 @@ const Home = () => {
       s_d: "2023-07-17",
       e_d: "2023-10-01",
       location: "Chandigarh, Punjab, India",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
+      des: "I was working as a PHP Developer and wordpress theme developer.Also worked on a react project. It`s a good company.",
     },
     {
       c_color_1: "rgb(249 115 22)",
@@ -41,7 +41,7 @@ const Home = () => {
       s_d: "2022-7-09",
       e_d: "2023-7-01",
       location: "Chapra, Bihar, India",
-      des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem suscipit nam? Ducimus dolorem, tenetur incidunt sunt expedita repellat natus! Laravel Developer",
+      des: "Here i learned so many things from  scratch. Like using mySql database php and i worked on laravel, codeigniter, api ect.Also worked on android development using KOTLIN. I used js and there frameworks and libraries like jquery, react, ect.",
     },
   ];
   const tech = [
@@ -141,7 +141,7 @@ const Home = () => {
       <Hero />
       <div className="w-[100%] h-[15%] flex flex-col justify-center items-center">
         <span className="text-sm font-thin border-b border-dashed">
-          Exprience
+          Experience
         </span>
       </div>
       <div className="w-[100%] flex justify-center items-center flex-wrap relative ">
@@ -152,7 +152,7 @@ const Home = () => {
             c_color_2={item.c_color_2}
             first_name={item.first_name}
             last_name={item.last_name}
-            degignation={item.degignation}
+            degignation={item.designationˀ}
             s_d={item.s_d}
             e_d={item.e_d}
             location={item.location}
@@ -177,7 +177,9 @@ const Home = () => {
         ))}
       </div>
       <div className="w-[100%] h-[15%] flex flex-col justify-center items-center">
-        <span className="text-sm font-thin border-b border-dashed">Languages & Skills</span>
+        <span className="text-sm font-thin border-b border-dashed">
+          Languages & Skills
+        </span>
       </div>
       <div className="w-[100%] flex justify-center items-center flex-wrap relative ">
         {skill.map((item, index) => (
