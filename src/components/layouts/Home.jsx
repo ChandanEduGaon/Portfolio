@@ -152,7 +152,7 @@ const Home = () => {
             c_color_2={item.c_color_2}
             first_name={item.first_name}
             last_name={item.last_name}
-            degignation={item.designationˀ}
+            degignation={item.designation}
             s_d={item.s_d}
             e_d={item.e_d}
             location={item.location}
