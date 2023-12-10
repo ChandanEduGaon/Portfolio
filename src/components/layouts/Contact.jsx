@@ -30,17 +30,21 @@ const Contact = () => {
     });
   };
   const addContacts = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "contacts"), {
-        name: name,
-        email: email,
-        message: message
-      });
-      console.log("Document written with ID: ", docRef.id);
-      fire(200, 'ok')
-    } catch (e) {
-      console.error("Error adding document: ", e);
-      fire(500, "notOk");
+    if (name !== "" && email !== "") {
+      try {
+        const docRef = await addDoc(collection(db, "contacts"), {
+          name: name,
+          email: email,
+          message: message
+        });
+        console.log("Document written with ID: ", docRef.id);
+        fire(200, 'ok')
+      } catch (e) {
+        console.error("Error adding document: ", e);
+        fire(500, "notOk");
+      }
+    } else {
+      alert("Put your name and email please :)")
     }
   };
   return (
@@ -61,6 +65,7 @@ const Contact = () => {
                 const name = e.target.value; // Get the input value
                 setName(name); // Call the setName function with the input value
               }}
+              required
             />
           </span>
           <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
@@ -76,6 +81,7 @@ const Contact = () => {
                 const email = e.target.value; // Get the input value
                 setEmail(email); // Call the setName function with the input value
               }}
+              required
             />
           </span>
           <span className="border-[.1px] border-gray-400 flex flex-col p-3 w-[100%] rounded mb-2">
@@ -90,6 +96,7 @@ const Contact = () => {
                 const msg = e.target.value; // Get the input value
                 setMessage(msg); // Call the setName function with the input value
               }}
+              
             />
           </span>
           <button
