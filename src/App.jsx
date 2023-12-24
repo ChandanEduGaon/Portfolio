@@ -7,7 +7,7 @@ import About from "./components/layouts/About";
 import Contact from "./components/layouts/Contact";
 import Projects from "./components/layouts/Projects";
 import Preview from "./components/layouts/Preview";
-import { Analytics } from "@vercel/analytics/react";
+import Chandan from "./components/layouts/Chandan";
 
 function App() {
   return (
@@ -23,10 +23,10 @@ function App() {
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/projects" element={<Projects />}></Route>
           <Route exact path="/preview" element={<Preview />}></Route>
+          <Route exact path="/_chandan" element={<Chandan />}></Route>
         </Routes>
         <Footer />
       </div>
-      <Analytics />
     </Router>
   );
 }

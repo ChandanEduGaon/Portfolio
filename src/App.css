@@ -129,3 +129,23 @@ input {
 .todo-content {
   margin-top: 2rem;
 }
+.modal{
+  transition: 1s ease-in-out;
+}
+.modal-hide{
+  display: none !important;
+}
+.modal-show{
+  display: block !important;
+}
+.showErrors{
+  font-size: 12px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+*{
+  scroll-behavior: smooth;
+}
+#list ::-webkit-scrollbar{
+  width: 0%;
+}
