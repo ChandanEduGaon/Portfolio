@@ -11,13 +11,24 @@ const Home = () => {
   }, []);
   const exp = [
     {
+      c_color_1: "#0aa7ba",
+      c_color_2: "#000",
+      first_name: "Proclivity",
+      last_name: "Digitech",
+      designation: "Backend Developer",
+      s_d: "2024-05-06",
+      e_d: "Present",
+      location: "Bidhannagar, Kolkata, India",
+      des: "Here i am a Laravel Developer. I works on CRM softwares. I also works on API development for mobile applications.",
+    },
+    {
       c_color_1: "rgb(59, 130, 246)",
       c_color_2: "#000",
       first_name: "Build",
       last_name: "Formula",
       designation: "Laravel Developer",
       s_d: "2023-10-16",
-      e_d: "Present",
+      e_d: "2024-04-22",
       location: "Ahmedabad, Gujarat, India",
       des: "Here i am a Laravel Developer. I works on CRM, ERP software. I also works on API development. It`s my favourite company, peoples are so good.",
     },

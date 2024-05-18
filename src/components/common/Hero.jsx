@@ -40,7 +40,7 @@ const Hero = () => {
             className="text-white font-thin text-[10px] sm:text-sm pt-2 tracking-wider"
             style={animationStyles.animTop}
           >
-            I am a full stack web developer with 1.4 years of experience.
+            I am a full stack web developer with 2 {"<"} years of experience.
           </span>
         </div>
 
