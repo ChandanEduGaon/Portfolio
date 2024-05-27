@@ -71,6 +71,16 @@ const AppHeader = () => {
           </Link>
 
           <Link
+            to={"/pricing"}
+            className={`text-white anchor hover:text-white ${
+              location.pathname === "/pricing" ? "active text-purple-600" : ""
+            }`}
+            onClick={() => setMenu(!menu)}
+          >
+            Pricing
+          </Link>
+
+          <Link
             to={"/contact"}
             className={`text-white anchor hover:text-white ${
               location.pathname === "/contact" ? "active text-purple-600" : ""

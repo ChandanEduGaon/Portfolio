@@ -8,6 +8,7 @@ import Contact from "./components/layouts/Contact";
 import Projects from "./components/layouts/Projects";
 import Preview from "./components/layouts/Preview";
 import Chandan from "./components/layouts/Chandan";
+import Pricing from "./components/layouts/Pricing";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/projects" element={<Projects />}></Route>
           <Route exact path="/preview" element={<Preview />}></Route>
+          <Route exact path="/pricing" element={<Pricing />}></Route>
           <Route exact path="/_chandan" element={<Chandan />}></Route>
         </Routes>
         <Footer />
